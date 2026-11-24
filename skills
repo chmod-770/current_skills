@@ -1,0 +1,50 @@
+#!/usr/bin/bash
+set -u
+
+USAGE_MSG="
+Usage:
+	$0 [0|-|+|*] | -h
+
+# sem parametros lista tudo
+# -h 	mostra essa mensagem	
+# 0 	filtra as skills que preciso aprender
+# - 	filtra as skills que sei como funciona mas preciso melhorar
+# + 	filtra as skills que ja sei me virar sozinho
+# '*' 	filtra as skills que domino (lembrando que nao da pra saber td 100%)
+"
+
+function usage(){
+	local exit_status=${1:-0}
+	local output=1
+
+	if [ "${exit_status}" -ne 0 ]; then
+		output=2
+	fi
+	echo -e "${USAGE_MSG}" >&"${output}"
+	exit $exit_status
+}
+
+skill_type=""
+
+if [ $# -gt 1 ]; then
+	usage 2
+
+elif [ $# -eq 1 ]; then
+	case $1 in 
+		-h) usage;;
+		'0' | '-' | '+' | '*')
+			skill_type=$1
+			;;
+		*) usage 2;;
+	esac
+fi
+
+skills="$(< skills.txt)"
+if [ -z "$skill_type" ]; then
+	 printf '%s\n' "$skills"
+	 exit 0
+fi
+
+grep -F "[${skill_type}]" <<< "${skills}"
+
+

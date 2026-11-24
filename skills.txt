@@ -1,0 +1,149 @@
+
+SysAdmin DevOps Skills
+
+# [*] Tenho as manha
+# [+] Sei como funciona 
+# [-] Sei alguma coisinha ou outra
+# [0] Preciso Aprender
+
+Languages:
+	[-] english
+	[*] golang
+	[+] python
+	[+] bash
+	[-] awk
+
+Bash Syntax
+	[*] Vars
+	[*] type
+	[*] Functions
+	[*] if, Case, test
+	[+] For, while, until
+	[-] getopts
+	[-] Pipes, redirections & file descriptors
+
+Basic CLI tools
+	[*] ls, pwd
+	[*] mkdir, rm, rmdir, mktemp
+	[-] stat
+	[+] touch
+	[+] which, whereis
+	[-] locate, find
+	[+] vim
+	[-] nano
+	[-] inotify
+
+GIT & CI/CD
+	[-] git
+	[-] Ansible playbooks
+
+Search LOGs & files
+	[*] head, tail, less
+	[+] grep
+	[+] cat, tac
+	[+] sed, tr
+
+User, Groups & Permissions
+	[+] sudo
+	[+] usermod
+	[+] useradd
+	[+] passwd
+	[+] chown
+	[+] chmod
+
+Pkg Management
+	[+] apt
+	[+] dnf
+	[-] yum
+	[-] zypper
+	[+] pacman
+	[+] xbps
+
+Service Management: Systemd & Runit
+	[+] Systemctl, journalctl & Unitfile
+	[+] Runit: Bash(exec xpto 2>&1) & socklog
+
+Processes & Monitoring: ps, top/htop & vmstat
+	[+] ps
+	[+] top/htop, uptime & w
+	[0] vmstat
+
+Storage & FileSystem
+	[-] du, df, lsblk
+	[-] cron & anacron
+	[-] scp, tar & rsync
+	[0] LVM, RAID, NFS
+	[-] fstap, mount
+	[0] Backup 3-2-1
+
+Observabilidade & Logs
+	[0] Prometheus/Grafana
+	[0] logrotate
+	[0] rsynclog 
+
+Network Management
+	[*] iproute2
+	[+] NetworkManager (nmcli & nmtui)
+	[*] IPv6
+	[+] IPv4
+	[-] Routing (Static, OSPFv3, BGP)
+	[-] Vlans (802.1q, 802.1ad)
+
+Network trouble
+	[-] ss/lsof
+	[+] ping, traceroute, mtr
+	[+] dig
+	[0] drill, nslookup
+	[-] tcpdump
+	[-] wireshark
+	
+Network Sec
+	[-] nftables
+	[+] iptables
+	[+] ufw
+	[+] firewalld
+
+Kernel Management
+	[-] modprobe
+	[-] lspci
+	[-] lsmod
+	[-] udevadm
+
+Access & Sec
+	[-] tlog
+	[-] NTP, pubkeys & hardening
+	[-] sshd_config
+	[0] openssl
+	[0] fail2ban
+	[+] SELinux
+	[0] AppArmor
+	[0] PAM
+	[0] Auditd
+
+Podman
+	[+] Containers
+	[-] Network
+	[-] Volumes
+	[0] Pods
+	[0] quadlet
+
+Clusters
+	[+] kubectl
+	[+] K3s
+	[-] minikube
+	[0] k8s
+	[0] openshift
+
+Virtualizacao & Hypervisors:
+	[+] qemu/kvm
+	[+] qemu-img (qcow2, snapshot & backfiles)
+	[-] libvirt
+	[+] bridges & macvtap
+	[+] cloud-init
+	[-] cockpit-machine
+	[0] Proxmox
+
+Cloud:
+	[+] AWS EC2
+	[-] AWS VPS
+
