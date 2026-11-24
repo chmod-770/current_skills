@@ -3,7 +3,8 @@
 
 
 pra ver como funciona, basta executar:
-sh```
-    ./skills.sh -h
-```
 
+```sh
+    ./skills -h
+
+```
