@@ -3,15 +3,23 @@ set -u
 
 USAGE_MSG="
 Usage:
-	$0 [0|-|+|*] | -h
+	$0 [ [0|-|+|*] | [-h|-c] ]
 
 # sem parametros lista tudo
-# -h 	mostra essa mensagem	
+# -h 	mostra essa mensagem
+# -c 	mostra s'o as categorias
+#
 # 0 	filtra as skills que preciso aprender
 # - 	filtra as skills que sei como funciona mas preciso melhorar
 # + 	filtra as skills que ja sei me virar sozinho
 # '*' 	filtra as skills que domino (lembrando que nao da pra saber td 100%)
 "
+
+
+dbname="${0}.txt"
+skill_type=""
+
+
 
 function usage(){
 	local exit_status=${1:-0}
@@ -24,7 +32,14 @@ function usage(){
 	exit $exit_status
 }
 
-skill_type=""
+
+
+function categs() {
+	grep '{*}' ${dbname} | tr -d '{}'
+	exit 0
+}
+
+
 
 if [ $# -gt 1 ]; then
 	usage 2
@@ -35,16 +50,21 @@ elif [ $# -eq 1 ]; then
 		'0' | '-' | '+' | '*')
 			skill_type=$1
 			;;
+		-c) categs ;;
 		*) usage 2;;
 	esac
 fi
 
-skills="$(< skills.txt)"
+
+
+
 if [ -z "$skill_type" ]; then
-	 printf '%s\n' "$skills"
-	 exit 0
+	tr -d '{}' <<< "$(<$dbname)"
+	exit 0
 fi
 
-grep -F "[${skill_type}]" <<< "${skills}"
+
+
+grep -F "[${skill_type}]" "$dbname"
 
 
