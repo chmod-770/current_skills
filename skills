@@ -41,6 +41,13 @@ function categs() {
 
 
 
+function sh_categ_block() {
+	awk "/{{ $1/,/---/" "${dbname}" | sed 's:---:\n:' | tr -d '{}'
+	exit 0
+}
+
+
+
 if [ $# -gt 1 ]; then
 	usage 2
 
@@ -51,6 +58,7 @@ elif [ $# -eq 1 ]; then
 			skill_type=$1
 			;;
 		-c) categs ;;
+		-c=*) sh_categ_block "${1:3}";;
 		*) usage 2;;
 	esac
 fi
