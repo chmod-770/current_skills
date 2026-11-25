@@ -6,13 +6,14 @@ Usage:
 	$0 [ [0|-|+|*] | [-h|-c] ]
 
 # sem parametros lista tudo
-# -h 	mostra essa mensagem
-# -c 	mostra s'o as categorias
+# -h 		mostra essa mensagem
+# -c 		mostra s'o as categorias
+# -c=CATEG	Lista as skills por categ
 #
 # 0 	filtra as skills que preciso aprender
 # - 	filtra as skills que sei como funciona mas preciso melhorar
 # + 	filtra as skills que ja sei me virar sozinho
-# '*' 	filtra as skills que domino (lembrando que nao da pra saber td 100%)
+# '*' 	filtra as skills que domino
 "
 
 
