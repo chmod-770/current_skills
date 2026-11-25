@@ -6,14 +6,16 @@ SysAdmin DevOps Skills
 # [-] Sei alguma coisinha ou outra
 # [0] Preciso Aprender
 
-Languages:
+{Languages}
 	[-] english
 	[*] golang
 	[+] python
 	[+] bash
 	[-] awk
+	[-] nasm elf64
+	[-] C
 
-Bash Syntax
+{Bash Syntax}
 	[*] Vars
 	[*] type
 	[*] Functions
@@ -22,28 +24,31 @@ Bash Syntax
 	[-] getopts
 	[-] Pipes, redirections & file descriptors
 
-Basic CLI tools
+{Cli Tools}
 	[*] ls, pwd
 	[*] mkdir, rm, rmdir, mktemp
 	[-] stat
 	[+] touch
 	[+] which, whereis
 	[-] locate, find
-	[+] vim
-	[-] nano
 	[-] inotify
 
-GIT & CI/CD
+{CLI TextEditors}
+	[+] vim
+	[-] nano
+	[0] Emacs
+
+{GIT & CI/CD}
 	[-] git
 	[-] Ansible playbooks
 
-Search LOGs & files
+{Search LOGs & files}
 	[*] head, tail, less
 	[+] grep
 	[+] cat, tac
 	[+] sed, tr
 
-User, Groups & Permissions
+{User, Groups & Permissions}
 	[+] sudo
 	[+] usermod
 	[+] useradd
@@ -51,7 +56,7 @@ User, Groups & Permissions
 	[+] chown
 	[+] chmod
 
-Pkg Management
+{Pkg Management}
 	[+] apt
 	[+] dnf
 	[-] yum
@@ -59,16 +64,16 @@ Pkg Management
 	[+] pacman
 	[+] xbps
 
-Service Management: Systemd & Runit
+{Service Management: Systemd & Runit}
 	[+] Systemctl, journalctl & Unitfile
 	[+] Runit: Bash(exec xpto 2>&1) & socklog
 
-Processes & Monitoring: ps, top/htop & vmstat
+{Processes & Monitoring: ps, top/htop & vmstat}
 	[+] ps
 	[+] top/htop, uptime & w
 	[0] vmstat
 
-Storage & FileSystem
+{Storage & FileSystem}
 	[-] du, df, lsblk
 	[-] cron & anacron
 	[-] scp, tar & rsync
@@ -76,20 +81,25 @@ Storage & FileSystem
 	[-] fstap, mount
 	[0] Backup 3-2-1
 
-Observabilidade & Logs
+{Observabilidade & Logs}
 	[0] Prometheus/Grafana
 	[0] logrotate
 	[0] rsynclog 
 
-Network Management
+{Network Management}
 	[*] iproute2
 	[+] NetworkManager (nmcli & nmtui)
 	[*] IPv6
 	[+] IPv4
 	[-] Routing (Static, OSPFv3, BGP)
-	[-] Vlans (802.1q, 802.1ad)
 
-Network trouble
+{Network Links}
+	[-] Namespaces
+	[-] Vlans (802.1q, 802.1ad)
+	[-] Veths 
+	[+] bridges & macvtap
+	
+{Network trouble}
 	[-] ss/lsof
 	[+] ping, traceroute, mtr
 	[+] dig
@@ -97,19 +107,20 @@ Network trouble
 	[-] tcpdump
 	[-] wireshark
 	
-Network Sec
+{Network Sec}
 	[-] nftables
 	[+] iptables
 	[+] ufw
 	[+] firewalld
 
-Kernel Management
+{Kernel Management}
 	[-] modprobe
 	[-] lspci
 	[-] lsmod
 	[-] udevadm
+	[-] dracut
 
-Access & Sec
+{Access & Sec}
 	[-] tlog
 	[-] NTP, pubkeys & hardening
 	[-] sshd_config
@@ -120,30 +131,31 @@ Access & Sec
 	[0] PAM
 	[0] Auditd
 
-Podman
+{Podman}
 	[+] Containers
 	[-] Network
 	[-] Volumes
 	[0] Pods
 	[0] quadlet
+	[-] Build Images
 
-Clusters
+{Clusters}
 	[+] kubectl
 	[+] K3s
 	[-] minikube
 	[0] k8s
 	[0] openshift
 
-Virtualizacao & Hypervisors:
+{Virtualizacao & Hypervisors}
 	[+] qemu/kvm
 	[+] qemu-img (qcow2, snapshot & backfiles)
 	[-] libvirt
-	[+] bridges & macvtap
 	[+] cloud-init
 	[-] cockpit-machine
 	[0] Proxmox
 
-Cloud:
+{Cloud}
 	[+] AWS EC2
 	[-] AWS VPS
+
 
