@@ -6,156 +6,207 @@ SysAdmin DevOps Skills
 # [-] Sei alguma coisinha ou outra
 # [0] Preciso Aprender
 
-{Languages}
+
+{{ Languages }}
 	[-] english
 	[*] golang
+	[*] bash
 	[+] python
-	[+] bash
 	[-] awk
 	[-] nasm elf64
 	[-] C
+	[+] html5, css3 & JS
+---
 
-{Bash Syntax}
+
+{{ Bash Syntax }}
 	[*] Vars
 	[*] type
 	[*] Functions
 	[*] if, Case, test
-	[+] For, while, until
-	[-] getopts
+	[*] For, while, until
+	[+] getopts
 	[-] Pipes, redirections & file descriptors
+---
 
-{Cli Tools}
-	[*] ls, pwd
+
+{{ Cli Tools }}
+	[*] ls, pwd, cp
 	[*] mkdir, rm, rmdir, mktemp
 	[-] stat
 	[+] touch
 	[+] which, whereis
 	[-] locate, find
 	[-] inotify
+---
 
-{CLI TextEditors}
+
+{{ CLI TextEditors }}
 	[+] vim
 	[-] nano
 	[0] Emacs
+---
 
-{GIT & CI/CD}
-	[-] git
+
+{{ GIT & CI/CD }}
+	[+] git (clone, pull, push..
+	[-] git (merge, rebase, checkout
 	[-] Ansible playbooks
+	[0] Terraform
+---
 
-{Search LOGs & files}
+
+{{ Search LOGs & files }}
 	[*] head, tail, less
 	[+] grep
 	[+] cat, tac
 	[+] sed, tr
+---
 
-{User, Groups & Permissions}
+
+{{ User, Groups & Permissions }}
 	[+] sudo
 	[+] usermod
 	[+] useradd
+	[-] groupadd, groupmod, groupdel
 	[+] passwd
 	[+] chown
 	[+] chmod
+---
 
-{Pkg Management}
+
+{{ Pkg Management }}
 	[+] apt
 	[+] dnf
 	[-] yum
 	[-] zypper
 	[+] pacman
 	[+] xbps
+---
 
-{Service Management: Systemd & Runit}
+
+{{ Service Management: Systemd & Runit }}
 	[+] Systemctl, journalctl & Unitfile
 	[+] Runit: Bash(exec xpto 2>&1) & socklog
+---
 
-{Processes & Monitoring: ps, top/htop & vmstat}
+
+{{ Processes & Monitoring: ps, top/htop & vmstat }}
 	[+] ps
 	[+] top/htop, uptime & w
 	[0] vmstat
+---
 
-{Storage & FileSystem}
-	[-] du, df, lsblk
+
+{{ Storage & FileSystem }}
+	[+] du, df, lsblk
 	[-] cron & anacron
 	[-] scp, tar & rsync
 	[0] LVM, RAID, NFS
 	[-] fstap, mount
 	[0] Backup 3-2-1
+---
 
-{Observabilidade & Logs}
+
+{{ Observabilidade & Logs }}
 	[0] Prometheus/Grafana
 	[0] logrotate
 	[0] rsynclog 
+---
 
-{Network Management}
+
+{{ Network Management }}
 	[*] iproute2
 	[+] NetworkManager (nmcli & nmtui)
 	[*] IPv6
 	[+] IPv4
 	[-] Routing (Static, OSPFv3, BGP)
+---
 
-{Network Links}
-	[-] Namespaces
+
+{{ Network Links }}
+	[+] Namespaces
+	[+] Veths
+	[+] bridges
 	[-] Vlans (802.1q, 802.1ad)
-	[-] Veths 
-	[+] bridges & macvtap
-	
-{Network trouble}
+	[-] macvtap
+	[-] macvlan
+---
+
+
+{{ Network trouble }}
 	[-] ss/lsof
 	[+] ping, traceroute, mtr
-	[+] dig
-	[0] drill, nslookup
+	[+] bind-utils
 	[-] tcpdump
 	[-] wireshark
-	
-{Network Sec}
+	[0] drill, nslookup
+---
+
+
+{{ Network Sec }}
 	[-] nftables
 	[+] iptables
 	[+] ufw
 	[+] firewalld
+---
 
-{Kernel Management}
+
+{{ Kernel Management }}
 	[-] modprobe
 	[-] lspci
 	[-] lsmod
 	[-] udevadm
 	[-] dracut
+	[-] grub
+---
 
-{Access & Sec}
+
+{{ Access & Sec }}
+	[+] SELinux
 	[-] tlog
-	[-] NTP, pubkeys & hardening
+	[-] pubkeys & hardening
 	[-] sshd_config
 	[0] openssl
 	[0] fail2ban
-	[+] SELinux
 	[0] AppArmor
 	[0] PAM
 	[0] Auditd
+---
 
-{Podman}
+
+{{ Podman }}
 	[+] Containers
 	[-] Network
 	[-] Volumes
 	[0] Pods
 	[0] quadlet
 	[-] Build Images
+---
 
-{Clusters}
+
+{{ Clusters }}
 	[+] kubectl
 	[+] K3s
 	[-] minikube
 	[0] k8s
 	[0] openshift
+---
 
-{Virtualizacao & Hypervisors}
+
+{{ Virtualizacao & Hypervisors }}
 	[+] qemu/kvm
 	[+] qemu-img (qcow2, snapshot & backfiles)
 	[-] libvirt
 	[+] cloud-init
 	[-] cockpit-machine
 	[0] Proxmox
+---
 
-{Cloud}
+
+{{ Cloud }}
 	[+] AWS EC2
 	[-] AWS VPS
+---
 
 
