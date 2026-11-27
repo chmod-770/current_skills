@@ -1,212 +1,217 @@
 
 SysAdmin DevOps Skills
 
-# [*] Tenho as manha
-# [+] Sei como funciona 
-# [-] Sei alguma coisinha ou outra
+# niveis teoricos: 0 nada, 5 sou o bravo
+#
+# [5] Tenho as manha
+# [4] Sei como funciona 
+# [3] Sei alguma coisinha --help/man
+# [2] Ja usei alguma vez
+# [1] Sei o conceito, mas nunca mexi
 # [0] Preciso Aprender
 
 
 {{ Languages }}
-	[-] english
-	[*] golang
-	[*] bash
-	[+] python
-	[-] awk
-	[-] nasm elf64
-	[-] C
-	[+] html5, css3 & JS
+	[3] english
+	[5] golang
+	[4] bash
+	[3] python
+	[2] awk
+	[3] nasm elf64
+	[3] C, C#, Dart, JS & HTML5/CSS3
+---
+
+{{ Shell Script }}
+	[4] Functions
+	[4] if, Case, test
+	[4] For, while, until
+	[3] test '[ ]'
+---
+
+{{ Bash only }}
+	[4] Parameter Expansion 
+	[4] test '[[ ]]'
+	[3] aritmetic expansion (( ))
+	[2] getopts
 ---
 
 
-{{ Bash Syntax }}
-	[*] Vars
-	[*] type
-	[*] Functions
-	[*] if, Case, test
-	[*] For, while, until
-	[+] getopts
-	[-] Pipes, redirections & file descriptors
----
-
-
-{{ Cli Tools }}
-	[*] ls, pwd, cp
-	[*] mkdir, rm, rmdir, mktemp
-	[-] stat
-	[+] touch
-	[+] which, whereis
-	[-] locate, find
-	[-] inotify
+{{ Cli utils }}
+	[4] man, info
+	[3] Pipes, redirections & file descriptors
+	[5] ls, pwd, cp
+	[5] mkdir, rm, rmdir, mktemp
+	[2] stat, lsattr
+	[4] touch
+	[4] which, whereis
+	[3] locate, find
+	[3] hostnamectl
 ---
 
 
 {{ CLI TextEditors }}
-	[+] vim
-	[-] nano
+	[5] vim
+	[3] nano
 	[0] Emacs
 ---
 
 
 {{ GIT & CI/CD }}
-	[+] git (clone, pull, push..
-	[-] git (merge, rebase, checkout
-	[-] Ansible playbooks
+	[5] git (clone, pull, push..)
+	[2] git (merge, rebase, checkout)
+	[1] Ansible playbooks
 	[0] Terraform
+	[0] Runners
 ---
 
 
 {{ Search LOGs & files }}
-	[*] head, tail, less
-	[+] grep
-	[+] cat, tac
-	[+] sed, tr
+	[5] head, tail, less
+	[4] grep
+	[5] cat, tac
+	[4] sed, tr
 ---
 
 
 {{ User, Groups & Permissions }}
-	[+] sudo
-	[+] usermod
-	[+] useradd
-	[-] groupadd, groupmod, groupdel
-	[+] passwd
-	[+] chown
-	[+] chmod
+	[4] sudo
+	[4] useradd, usermod
+	[3] groupadd, groupmod
+	[4] passwd
+	[5] chown
+	[5] chmod
+	[4] chattr
 ---
 
 
 {{ Pkg Management }}
-	[+] apt
-	[+] dnf
-	[-] yum
-	[-] zypper
-	[+] pacman
-	[+] xbps
+	[4] apt
+	[4] dnf
+	[0] yum
+	[1] zypper
+	[3] pacman
+	[4] xbps
 ---
 
 
 {{ Service Management: Systemd & Runit }}
-	[+] Systemctl, journalctl & Unitfile
-	[+] Runit: Bash(exec xpto 2>&1) & socklog
+	[4] Systemctl, journalctl & Unitfile
+	[3] Runit: 'exec xpto 2>&1'..., syslog, socklog
 ---
 
 
 {{ Processes & Monitoring: ps, top/htop & vmstat }}
-	[+] ps
-	[+] top/htop, uptime & w
+	[3] ps
+	[4] top/htop, uptime & w
 	[0] vmstat
+	[3] cron & anacron
 ---
 
 
 {{ Storage & FileSystem }}
-	[+] du, df, lsblk
-	[-] cron & anacron
-	[-] scp, tar & rsync
+	[4] du, df, lsblk
+	[3] scp, tar & rsync
+	[3] fstap, mount
 	[0] LVM, RAID, NFS
-	[-] fstap, mount
 	[0] Backup 3-2-1
 ---
 
 
 {{ Observabilidade & Logs }}
-	[0] Prometheus/Grafana
+	[1] Prometheus/Grafana
 	[0] logrotate
 	[0] rsynclog 
 ---
 
 
 {{ Network Management }}
-	[*] iproute2
-	[+] NetworkManager (nmcli & nmtui)
-	[*] IPv6
-	[+] IPv4
-	[-] Routing (Static, OSPFv3, BGP)
----
-
-
-{{ Network Links }}
-	[+] Namespaces
-	[+] Veths
-	[+] bridges
-	[-] Vlans (802.1q, 802.1ad)
-	[-] macvtap
-	[-] macvlan
+	[4] iproute2
+	[4] NetworkManager (nmcli & nmtui)
+	[5] IPv6, IPv4
+	[3] Routing (Static, OSPFv3, BGP)
+	[4] Veths
+	[4] bridges
+	[2] Vlans (802.1q, 802.1ad)
+	[2] macvtap, macvlan
 ---
 
 
 {{ Network trouble }}
-	[-] ss/lsof
-	[+] ping, traceroute, mtr
-	[+] bind-utils
-	[-] tcpdump
-	[-] wireshark
+	[3] ss/lsof
+	[4] ping, traceroute, mtr
+	[3] bind-utils
+	[3] tcpdump
+	[3] wireshark
 	[0] drill, nslookup
 ---
 
 
 {{ Network Sec }}
-	[-] nftables
-	[+] iptables
-	[+] ufw
-	[+] firewalld
+	[3] nftables
+	[3] iptables
+	[4] ufw
+	[4] firewalld
 ---
 
 
 {{ Kernel Management }}
-	[-] modprobe
-	[-] lspci
-	[-] lsmod
-	[-] udevadm
-	[-] dracut
-	[-] grub
+	[3] Namespaces
+	[3] cgroups
+	[4] modprobe
+	[4] lspci
+	[4] lsmod
+	[3] dracut
+	[3] grub
+	[0] udevadm
 ---
 
 
 {{ Access & Sec }}
-	[+] SELinux
-	[-] tlog
-	[-] pubkeys & hardening
-	[-] sshd_config
-	[0] openssl
-	[0] fail2ban
+	[4] SELinux
+	[2] tlog
+	[2] pubkeys & hardening
+	[3] sshd_config
+	[1] openssl
+	[1] fail2ban
 	[0] AppArmor
 	[0] PAM
 	[0] Auditd
 ---
 
 
-{{ Podman }}
-	[+] Containers
-	[-] Network
-	[-] Volumes
-	[0] Pods
-	[0] quadlet
-	[-] Build Images
+{{ Podman & Docker }}
+	[4] Containers
+	[3] Network
+	[3] Volumes
+	[2] Pods
+	[1] quadlet
+	[3] Build Images
 ---
 
 
-{{ Clusters }}
-	[+] kubectl
-	[+] K3s
-	[-] minikube
-	[0] k8s
-	[0] openshift
+{{ Clusters Tools }}
+	[3] kubectl
+	[3] K3s
+	[3] kind
+	[1] minikube
+	[2] kubernetes
+	[1] openshift
 ---
 
 
 {{ Virtualizacao & Hypervisors }}
-	[+] qemu/kvm
-	[+] qemu-img (qcow2, snapshot & backfiles)
-	[-] libvirt
-	[+] cloud-init
-	[-] cockpit-machine
+	[3] qemu, kvm
+	[4] qemu-img (qcow2, snapshot & backfiles)
+	[3] libvirt
+	[4] cloud-init
+	[3] cockpit-machine
 	[0] Proxmox
 ---
 
 
 {{ Cloud }}
-	[+] AWS EC2
-	[-] AWS VPS
+	[4] AWS EC2
+	[3] AWS VPS
 ---
 
 
