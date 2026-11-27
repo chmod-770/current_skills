@@ -3,17 +3,19 @@ set -u
 
 USAGE_MSG="
 Usage:
-	$0 [ [0|-|+|*] | [-h|-c] ]
+	$0 [ [0-5] | [-h|-c] ]
 
 # sem parametros lista tudo
 # -h 		mostra essa mensagem
-# -c 		mostra s'o as categorias
-# -c=CATEG	Lista as skills por categ
+# -c 		lista as CATEGs
+# -c=CATEG	Lista as skills por CATEG
 #
-# 0 	filtra as skills que preciso aprender
-# - 	filtra as skills que sei como funciona mas preciso melhorar
-# + 	filtra as skills que ja sei me virar sozinho
-# '*' 	filtra as skills que domino
+# 0 	-> preciso aprender
+# 1 	-> ja ouvi falar ou usei uma vez ou outra
+# 2 	-> sei usar o basico
+# 3	-> se acabar a internet, eu nao fico travado...
+# 4 	-> me de um problema e a doc que te darei uma solucao
+# 5 	-> O pai 'e mostro fio, iXquece fio
 "
 
 
@@ -21,14 +23,12 @@ dbname="${0}.txt"
 skill_type=""
 
 
-
 function usage(){
 	local exit_status=${1:-0}
 	local output=1
 
-	if [ "${exit_status}" -ne 0 ]; then
-		output=2
-	fi
+	[ "${exit_status}" -ne 0 ] && output=2
+
 	echo -e "${USAGE_MSG}" >&"${output}"
 	exit $exit_status
 }
@@ -42,7 +42,7 @@ function categs() {
 
 
 
-function sh_categ_block() {
+function categ_content() {
 	awk "/{{ $1/,/---/" "${dbname}" | sed 's:---:\n:' | tr -d '{}'
 	exit 0
 }
@@ -54,12 +54,10 @@ if [ $# -gt 1 ]; then
 
 elif [ $# -eq 1 ]; then
 	case $1 in 
+		[0-5])skill_type=$1;;
 		-h) usage;;
-		'0' | '-' | '+' | '*')
-			skill_type=$1
-			;;
 		-c) categs ;;
-		-c=*) sh_categ_block "${1:3}";;
+		-c=*) categ_content "${1:3}";;
 		*) usage 2;;
 	esac
 fi
@@ -68,12 +66,12 @@ fi
 
 
 if [ -z "$skill_type" ]; then
-	tr -d '{}' <<< "$(<$dbname)"
-	exit 0
+	tr -d '{}' <<< "$(<$dbname)" | less
+	exit
 fi
 
 
 
-grep -F "[${skill_type}]" "$dbname"
-
+grep -F "[${skill_type}]" "$dbname" | less
+exit
 
